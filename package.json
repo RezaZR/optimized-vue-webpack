@@ -25,8 +25,11 @@
   ],
   "author": "Reza Zacky Ramadan",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "babel-loader": "^8.0.6",
@@ -38,7 +41,6 @@
     "pug-plain-loader": "^1.0.0",
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
-    "vue": "^2.6.11",
     "vue-loader": "^15.8.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",

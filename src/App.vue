@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    .asd {{ message }}
+    a(href="#") {{ message }}
 </template>
 
 <script>
@@ -15,8 +15,6 @@ export default {
 
 <style lang="scss">
 #app {
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  color: blue;
+  color: red;
 }
 </style>
