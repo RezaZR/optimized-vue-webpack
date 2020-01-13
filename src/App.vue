@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    a(href="#") {{ message }}
+    router-view
 </template>
 
 <script>

@@ -3,13 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "description": "RnD for Facial Recognition",
-  "main": "main.js",
-  "scripts": {
-    "clean": "rimraf dist",
-    "build": "npm run clean && webpack --mode production",
-    "serve": "webpack-dev-server --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "Facial",
     "Recognition",
@@ -25,8 +18,17 @@
   ],
   "author": "Reza Zacky Ramadan",
   "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --mode production",
+    "serve": "webpack-dev-server --mode development",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.7",

@@ -8,9 +8,9 @@ module.exports = {
   entry: "./src/main.js",
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "/src")
+      ROOT: path.resolve(__dirname, "./src")
     },
-    extensions: [".js", ".vue", ".json", "css", "scss"]
+    extensions: [".json", ".html", ".vue", ".js", ".scss"]
   },
   module: {
     rules: [
@@ -26,12 +26,12 @@ module.exports = {
             options: {
               prependData: `
                 @import "./src/styles/_main.scss";
-              `,
-              webpackImporter: false
+              `
             }
           }
         ]
       },
+      // { test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/, loader: "file-loader" },
       { test: /\.pug$/, loader: "pug-plain-loader" }
     ]
   },
