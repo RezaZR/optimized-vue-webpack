@@ -1,5 +1,7 @@
 <template lang="pug">
-  .test test
+  div
+    .test test
+    img(src="../assets/matadewa.png")
 </template>
 
 <script>

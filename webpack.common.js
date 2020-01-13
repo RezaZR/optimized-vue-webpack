@@ -24,6 +24,7 @@ module.exports = {
   ],
   module: {
     rules: [
+      { test: /\.html$/, use: "html-loader" },
       { test: /\.pug$/, loader: "pug-plain-loader" },
       {
         test: /\.js$/,
@@ -47,8 +48,18 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg|jpg|jpeg|png|gif)(\?.*$|$)/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            outputPath: "images",
+            esModule: false
+          }
+        }
       }
-      // { test: /\.(woff|woff2|eot|ttf|svg|jpg|jpeg|png)(\?.*$|$)/, loader: "file-loader" },
     ]
   }
 };
