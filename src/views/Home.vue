@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     .test test
-    img(src="../assets/matadewa.png")
+    img(src="../assets/matadewa.svg")
 </template>
 
 <script>

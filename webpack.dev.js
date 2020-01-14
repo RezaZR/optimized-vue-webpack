@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackBundleAnalyzer = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 const path = require("path");
 const common = require("./webpack.common");
@@ -10,10 +12,14 @@ module.exports = merge(common, {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
   },
+  devServer: {
+    transportMode: "ws"
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    new WebpackBundleAnalyzer()
   ],
   module: {
     rules: [
